@@ -28,7 +28,7 @@ class: middle
 ---
 class: middle
 
-# Birthday app  
+# Birthday app
 
 ```bash
 ./birthday <date-of-birth>   # Shortened to "dob"
@@ -159,9 +159,6 @@ let is_empty = match Some(5) {
  None => true
 };
 ```
-???
-
-TODO: check this match statement compiles
 
 ---
 class: middle
@@ -353,9 +350,6 @@ panic!
 ./birthday tomorrow
 panic!
 ```
-???
-
-TODO We're ignoring leap years for now
 ---
 class: middle
 
@@ -443,13 +437,22 @@ class: center, middle
 class: middle
 
 # Find me
- - Newsletter: [buttondown.email/zainab](https://buttondown.email/zainab)
- - Email: zainab@duskimpression.com
+ - Blog: [kebab-ca.se](https://kebab-ca.se/presentations.html)
+ - BlueSky: zainab.pureasync.com
+ - Email: zainab@pureasync.com
  - LinkedIn: [zainab-ali-fp](https://uk.linkedin.com/in/zainab-ali-fp)
  - GitHub: zainab-ali
 
+---
+class: middle
+
+# Books
+ - [Functional Stream Processing](https://pureasync.gumroad.com/l/functional-stream-processing-in-scala)
+
 # Upcoming talks
- - Reasoning with Async Rust, [RustLab 2024](https://rustlab.it/)
+ - Your docs are a program, [Devoxx UK 2025](https://www.devoxx.co.uk/)
+ - Your docs are a program, [LambdaDays 2025](https://lambdadays.org/lambdadays2025)
+ - Functional Stream Processing Workshop, [Scala Days 2025](https://scaladays.org/workshops#workshops)
 
 ---
 class: center, middle
