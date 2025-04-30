@@ -34,20 +34,20 @@ class: middle
 ./birthday <date-of-birth>   # Shortened to "dob"
 ```
 
-## Today is 6th August 2024.
+## Today is 30th April 2025.
 
 ```bash
-./birthday 2000-08-06   # My birthday is today
-Happy birthday! Congratulations on becoming 24!
+./birthday 2000-04-30   # My birthday is today
+Happy birthday! Congratulations on becoming 25!
 ```
 
 ```bash
-./birthday 2000-08-08   # My birthday is soon
+./birthday 2000-05-02   # My birthday is soon
 It's not your birthday yet. Wait for 2 more days.
 ```
 
 ```bash
-./birthday 2000-08-05   # My birthday was yesterday
+./birthday 2000-04-29   # My birthday was yesterday
 You've already had your birthday. I hope you had fun!
 ```
 ---
@@ -82,9 +82,9 @@ class: middle
 
 # 🐛 The bug
 
-## It's close to midnight on the 5th August.
+## It's close to midnight on the 29th April.
 ```bash
-./birthday 2000-08-06
+./birthday 2000-04-30
 It's not your birthday yet. Wait for 0 more days.
 ```
 
@@ -176,13 +176,13 @@ let x = ();
 ```rust
 let x = today();
 // Is not equvalent to
-let x = NaiveDate::of_ymd(2024,08,06);
+let x = NaiveDate::of_ymd(2025,04,30);
 ```
 
 ```rust
 let x = sys::env::args();
 // Is not equivalent to
-let x = vec!["birthday", "2024-08-06"];
+let x = vec!["birthday", "2000-04-30"];
 ```
 ---
 class: middle
@@ -231,8 +231,8 @@ class: middle
 ```rust
     #[test]
     fn test_days_until_birthday() {
-        let today = NaiveDate::from_ymd(2024, 08, 05);
-        let birthday = NaiveDate::from_ymd(2024, 08, 06);
+        let today = NaiveDate::from_ymd(2025, 04, 29);
+        let birthday = NaiveDate::from_ymd(2024, 04, 30);
         let result = calc_days_until_birthday(today, birthday);
         assert_eq!(result, 1);
     }
@@ -340,7 +340,7 @@ class: middle
 # 🐛 More problems
 
 ```bash
-./birthday 2030-08-06
+./birthday 2030-04-30
 panic!
 ```
 
@@ -414,7 +414,7 @@ class: middle
 ```rust
     #[test]
     fn born_in_future() {
-        let today = NaiveDate::from_ymd(2025, 01, 01);
+        let today = NaiveDate::from_ymd(2025, 04, 29);
         let result = calc_message(Some("2030-06-15".to_string()), today);
         assert_eq!(result, Err(Error::BornInTheFuture));
     }
