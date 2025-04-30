@@ -125,9 +125,8 @@ fn birthday() -> NaiveDate {
 ```
 
 ```rust
-fn date_of_birth() -> NaiveDate {
-    let date_string = std::env::args().nth(1).unwrap();
-    NaiveDate::parse_from_str(&date_string, "%Y-%m-%d").unwrap()
+fn days_until_birthday() -> i64 {
+    birthday().signed_duration_since(today()).num_days()
 }
 ```
 
@@ -165,15 +164,15 @@ class: middle
 # Side effects
 
 ```rust
-let x = println!("Happy birthday!");
-// Is not equivalent to
-let x = ();
-```
-
-```rust
 let x = today();
 // Is not equvalent to
 let x = NaiveDate::of_ymd(2025,04,30);
+```
+
+```rust
+let x = println!("Happy birthday!");
+// Is not equivalent to
+let x = ();
 ```
 
 ```rust
